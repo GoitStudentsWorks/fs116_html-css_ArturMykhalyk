@@ -88,6 +88,9 @@
             justify-content: center;
             box-shadow: 0 0 0 5px #D4BFC4;
    }
+   ol li:nth-child(2){
+        padding: 18px 59px 18px 100px;
+   }
  /* .container-how{
 display: flex;
 flex-direction: column;
