@@ -48,18 +48,14 @@
   margin-bottom: 40px;
   gap: 14px;
 }
-.footer-tel {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.4;
-  color: #fbfbfb;
-}
+.footer-tel,
 .address-text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.4;
   color: #fbfbfb;
 }
+
 .footer-privacy-container {
   display: flex;
   flex-direction: column;
@@ -118,7 +114,6 @@
   }
   .footer-privacy-container:last-child {
     margin-left: auto;
-    width: 100%;
   }
   .footer-span,
   .footer-text-harvest {
