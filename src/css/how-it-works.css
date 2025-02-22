@@ -39,8 +39,9 @@
         width: 335px;
         height: 60px;
 }
-
-
+.span-how{
+    color: #D4BFC4;
+}
 .span-items{
     font-weight: 700;
         color: #141414;
