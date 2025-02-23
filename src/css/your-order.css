@@ -68,7 +68,7 @@
     border-radius: 30px;
     outline: none;
     margin-bottom: 16px;
-    transition: border 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .your-order-input::placeholder {
@@ -85,7 +85,7 @@
     border-radius: 30px;
     resize: none;
     outline: none;
-    transition: border 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .your-order-textarea::placeholder {
@@ -118,13 +118,21 @@
 .your-order-input-email:not(:placeholder-shown):invalid,
 .your-order-input-name:not(:placeholder-shown):invalid {
     border: 1px solid #E74A3B;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
 }
+
+.your-order-textarea:not(:placeholder-shown):invalid {
+    border: 1px solid #E74A3B;
+    }
 
 .your-order-input-email:not(:placeholder-shown):valid,
 .your-order-input-name:not(:placeholder-shown):valid {
     border: 1px solid #3CBC81;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
+}
+
+.your-order-textarea:not(:placeholder-shown):valid {
+    border: 1px solid #3CBC81;
 }
 
 .text-valid-email,
@@ -132,10 +140,11 @@
 .text-valid-name,
 .text-invalid-name {
     color: #141414;
-    font-size: 14px;
-    line-height: 1.43;
+    font-size: 10px;
+    letter-spacing: 0.1em;
     text-align: center;
-    padding-bottom: 8px;
+    padding-bottom: 3px;
+    padding-top: 2px;
 }
 
 .text-valid-email,
@@ -170,7 +179,8 @@
     height: 52px;
     border: none;
     margin-bottom: auto;
-    transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .your-order-block-btn:focus {
@@ -254,11 +264,9 @@
 }
 
 .your-order-section {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 32px;
+    margin-right: 32px;
     margin-bottom: 32px;
-    padding-left: 32px;
-    padding-right: 32px;
 }
 
 .your-order-text {
@@ -269,6 +277,7 @@
 
 .your-order-block {
     padding: 72px 100px;
+    margin-bottom: 32px;
 }
 
 .your-order-block-title {
@@ -286,9 +295,21 @@
     padding: 16px 0 16px 16px;
 }
 
+.your-order-input::placeholder {
+    color: #141414;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
 .your-order-textarea {
     height: 96px;
     padding: 16px 0px 0px 16px;
+}
+
+.your-order-textarea::placeholder {
+    color: #141414;
+    font-size: 16px;
+    line-height: 1.25;
 }
 
 .soc {
@@ -321,15 +342,14 @@
     max-width: 751px;
 }
 .your-order-title {
-    padding-bottom: 24px;
+    margin-bottom: 24px;
 }
 
 .your-order-section {
-    padding-left: 0;
-    padding-right: 0;
+    max-width: 100%;
+    margin: 0;
     display: flex;
     gap: 32px;
-    margin-bottom: 0;
 }
 
 .your-order-block {
@@ -345,5 +365,22 @@
 
 .soc-img {
     margin-bottom: 80px;
+}
+
+.your-order-block-btn:hover {
+    background-color: #D4BFC4;
+    color: #7A3145;
+}
+
+.your-order-block-btn:focus {
+    background-color: #FBFBFB;
+    color: #7A3145;
+    border: 1px solid #7A3145;
+}
+
+.your-order-block-btn:active {
+    background-color: #FBFBFB;
+    color: #7A3145;
+    border: 1px solid #7A3145;
 }
 }
