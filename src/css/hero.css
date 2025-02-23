@@ -12,7 +12,6 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  gap: 20px;
   padding: 100px 20px 40px 20px;
 }
 .hero-header {
@@ -33,7 +32,7 @@
   font-family: inherit;
   font-weight: 500;
   font-size: 14px;
-  line-height: 143%;
+  line-height: 1.43;
   color: #fbfbfb;
 }
 .text-wrapper {
@@ -61,19 +60,19 @@
     height: 536px;
   }
   .hero-text {
-    padding: 100px 32px 40px 32px;
-    gap: 24px;
+    padding: 100px 32px 52px 32px;
   }
   .hero-header {
     font-size: 76px;
   }
   .promo {
-    font-weight: 500;
     font-size: 16px;
     line-height: 1.25;
-    color: #fbfbfb;
     width: 603px;
     height: auto;
+  }
+  .text-wpapper {
+    gap: 24px;
   }
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -111,7 +110,6 @@
     flex-direction: column;
   }
   .hero-text {
-    box-sizing: border-box;
     padding: 232px 38px 52px 100px;
   }
   .text-wrapper {
@@ -124,10 +122,5 @@
   }
   .promo {
     width: 472px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.25;
-    color: #fbfbfb;
-    padding-bottom: 52px;
   }
 }
