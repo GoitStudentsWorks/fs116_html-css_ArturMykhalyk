@@ -145,15 +145,20 @@
 
                  .how-it-works {
                      background: linear-gradient(to right, #7a3145 50%, #576f35 50%);
-                     display: flex;
-                     justify-content: center;
-                     align-items: center;
-                 } 
-                .container-how{
+                 }
+                 .container,
+                 .second-sectionhow{
+                    padding: 0;
+                 }
+                 .container-how{
                     display: flex;
-                }
-                .second-sectionhow{
-                   padding: 100px 100px; 
-                }
+                    
+
+                 }
+                 .img-how{
+                    margin: 0;
+                   margin-right: 200px;
+                 }
+                
+
     }
-  
