@@ -42,8 +42,7 @@ margin-bottom: 12px;
 .vegetables-div{
 border-radius: 40px;
 padding: 32px 24px;
-width: auto;
-height: auto;
+max-width: 335px;
 background: #fbfbfb;
 }
 
@@ -56,22 +55,8 @@ background: #fbfbfb;
 
 @media only screen and ( max-width: 360px){
     .vegetables-title{
-        width: 260px;
         font-size: 40px;
     }  
-
-    .vegetables-div{
-        width: 260px;
-        padding: 14px 10px;
-    } 
-
-    .vegetables-text{
-        width: 260px;
-    }
-
-    .vegetables-list{
-        justify-content: start;
-    }
 }
 
 @media only screen and ( min-width: 768px){
@@ -80,6 +65,10 @@ background: #fbfbfb;
         line-height: 1;
         width: 628px;
         margin-bottom: 24px;
+    }
+
+    .vegetables-div{
+        padding: 32px 30px;
     }
 
     .vegetables-text{
@@ -99,8 +88,7 @@ background: #fbfbfb;
     }
 
     .vegetables-list{
-        gap: 24px;
-        row-gap: 28px;
+        gap: 28px 24px;
     }
 }
 
@@ -108,6 +96,10 @@ background: #fbfbfb;
     .vegetables-title{
         font-size: 64px;
         width: 508px;
+    }
+
+    .vegetables-div{
+        padding: 32px 32px;
     }
 
     .text-vegetables{
