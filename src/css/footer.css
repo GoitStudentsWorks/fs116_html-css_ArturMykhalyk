@@ -16,6 +16,7 @@
 .footer-icon {
   width: 168px;
   height: 16px;
+  fill: #fbfbfb;
 }
 
 .footer-text {
@@ -54,6 +55,7 @@
   font-size: 14px;
   line-height: 1.4;
   color: #fbfbfb;
+  font-style: normal;
 }
 
 .footer-privacy-container {
@@ -111,9 +113,7 @@
   .footer-privacy-container {
     flex-direction: row;
     justify-content: space-between;
-  }
-  .footer-privacy-container:last-child {
-    margin-left: auto;
+    width: 100%;
   }
   .footer-span,
   .footer-text-harvest {
@@ -124,6 +124,9 @@
 @media (min-width: 1280px) {
   .footer {
     padding: 52px 0;
+  }
+  .footer-container {
+    gap: 124px;
   }
   .footer-address-container {
     flex-direction: row;
