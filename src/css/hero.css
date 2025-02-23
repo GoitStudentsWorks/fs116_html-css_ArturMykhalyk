@@ -64,14 +64,8 @@
     padding: 100px 32px 40px 32px;
     gap: 24px;
   }
-
   .hero-header {
-    font-weight: 600;
     font-size: 76px;
-    line-height: 1;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    color: #fbfbfb;
   }
   .promo {
     font-weight: 500;
@@ -123,16 +117,10 @@
   .text-wrapper {
     width: 504px;
     height: auto;
-    gap: 0;
+    gap: 128px;
   }
   .hero-header {
-    font-size: 76px;
-    line-height: 1;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    color: #fbfbfb;
     width: 502px;
-    padding-bottom: 128px;
   }
   .promo {
     width: 472px;
