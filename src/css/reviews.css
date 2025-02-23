@@ -7,9 +7,15 @@
   font-size: 48px;
   line-height: 1.08;
   text-transform: uppercase;
-  color: #141414;
   width: 335px;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 330px) {
+  .reviews_title {
+font-size: 46px;
+max-width: 320px;
+}
 }
 
 .reviews-title-highlight {
@@ -17,12 +23,8 @@
 }
 
 .reviews_description {
-  font-weight: 500;
   font-size: 14px;
   line-height: 1.43;
-  color: #141414;
-  max-width: 100%;
-  height: 60px;
   letter-spacing: -0.01em;
   margin-bottom: 40px;
 }
@@ -38,7 +40,6 @@
 }
 
 .reviews_item {
-  width: 335px;
   max-height: 228px;
   display: flex;
   flex-direction: column;
@@ -57,7 +58,6 @@
 }
 
 .reviews_name {
-  color: #141414;
   font-size: 18px;
   font-weight: 600;
   line-height: 1.11;
@@ -70,7 +70,6 @@
 .reviews_text {
   color: #858585;
   font-size: 14px;
-  font-weight: 500;
   line-height: 1.43;
   text-align: center;
   max-width: 288px;
@@ -82,7 +81,6 @@
     font-size: 64px;
     line-height: 1;
     width: 553px;
-    height: 128px;
     margin-bottom: 24px;
   }
 
@@ -90,7 +88,6 @@
     font-size: 16px;
     line-height: 1.25;
     width: 553px;
-    height: 40px;
     margin-bottom: 52px;
   }
 
@@ -106,8 +103,12 @@
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .reviews_item {
-    min-width: 344px;
+    width: 344px;
   }
+
+  .reviews_list {
+  overflow-x: auto;
+}
 }
