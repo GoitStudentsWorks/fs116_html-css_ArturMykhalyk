@@ -115,7 +115,8 @@
         }
     } */
     .second-sectionhow{
-        padding: 0 164px;
+       margin: 0 auto;
+       width: 440px;
     }
     .how-text{
         margin-bottom: 24px;
