@@ -58,10 +58,11 @@
   .image-container {
     background: url('../img/hero/hero-tablet-min.webp') no-repeat center center;
     background-size: cover;
-    height: 768px;
+    height: 536px;
   }
   .hero-text {
     padding: 100px 32px 40px 32px;
+    gap: 24px;
   }
 
   .hero-header {
@@ -71,14 +72,12 @@
     letter-spacing: -0.01em;
     text-transform: uppercase;
     color: #fbfbfb;
-    padding-bottom: 24px;
   }
   .promo {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.25;
     color: #fbfbfb;
-
     width: 603px;
     height: auto;
   }
@@ -119,7 +118,7 @@
   }
   .hero-text {
     box-sizing: border-box;
-    padding: 232px 38px 0 100px;
+    padding: 232px 38px 52px 100px;
   }
   .text-wrapper {
     width: 504px;
