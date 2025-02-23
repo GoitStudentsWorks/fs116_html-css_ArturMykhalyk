@@ -181,16 +181,9 @@
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.your-order-block-btn:focus {
-    background-color: #FBFBFB;
-    color: #7A3145;
-    border: 1px solid #7A3145;
-}
-
 .your-order-block-btn:active {
     background-color: #FBFBFB;
     color: #7A3145;
-    border: 1px solid #7A3145;
 }
 
 .soc {
