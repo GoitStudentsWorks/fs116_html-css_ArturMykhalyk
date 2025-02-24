@@ -30,8 +30,10 @@
   right: 24px;
   background-color: #576f35;
   border-radius: 50%;
+
   width: 40px;
   height: 40px;
+  transform: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icons-close {
@@ -40,15 +42,19 @@
   left: 50%;
   transform: translate(-50%, -50%);
   stroke: #fff;
+  transform: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-btn:hover,
+.close-btn:focus,
+.close-btn:active {
+  background-color: #3c4c25;
+}
+.modal-icons-close:hover,
+.modal-icons-close:focus,
+.modal-icons-close:active {
+  stroke: #ffffff;
 }
 /* Контент модалки */
-.modal-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 52px;
-  width: 428px;
-}
 
 .modal-content {
   background-color: #fbfbfb;
@@ -57,6 +63,12 @@
   max-width: 524px;
 
   position: relative;
+}
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  max-width: 428px;
 }
 .modal-titel {
   font-family: 'Inter Tight', sans-serif;
@@ -101,37 +113,23 @@
 }
 
 .modal-form-input {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: row;
   background-color: transparent;
   outline: transparent;
+  font-size: 16px;
   box-sizing: border-box;
-  font-family: 'Inter Tight', sans-serif;
-  padding: 16px 346px 16px 16px;
   border: 1px solid #858585;
   border-radius: 30px;
   padding: 16px;
   width: 428px;
   max-height: 52px;
-  resize: none;
-  overflow-y: auto;
+
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-textarea {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 500;
   font-size: 16px;
-  padding: 16px 346px 16px 16px;
-  line-height: 1.25;
-  text-align: center;
-  color: #141414;
   box-sizing: border-box;
+  line-height: 1.25;
+
   border: 1px solid #858585;
   background-color: transparent;
   outline: transparent;
@@ -142,7 +140,6 @@
   resize: none;
   overflow-y: auto;
 
-  word-wrap: break-word;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Стилі для плейсхолдера у input */
@@ -153,7 +150,7 @@
   font-size: 16px;
 
   line-height: 1.25;
-  text-align: center;
+
   color: #141414;
 }
 .modal-form textarea::placeholder {
@@ -162,7 +159,7 @@
   font-size: 16px;
 
   line-height: 1.25;
-  text-align: center;
+
   color: #141414;
 }
 .modal-form input:focus,
@@ -172,16 +169,72 @@
   border-color: #7a3145;
 }
 
+.modal-form-input:not(:placeholder-shown):invalid {
+  border: 1px solid #e74a3b;
+  margin-bottom: 0px;
+}
+
+.modal-form-textarea:not(:placeholder-shown):invalid {
+  border: 1px solid #e74a3b;
+}
+
+.modal-form-input:not(:placeholder-shown):valid {
+  border: 1px solid #3cbc81;
+  margin-bottom: 0px;
+}
+
+.modal-form-textarea:not(:placeholder-shown):valid {
+  border: 1px solid #3cbc81;
+}
+.modal-form-input:not(:placeholder-shown):valid ~ .text-valid-email,
+.modal-form-input:not(:placeholder-shown):invalid ~ .text-invalid-email {
+  display: block;
+}
+.modal-form-input:not(:placeholder-shown):valid ~ .text-valid-name,
+.modal-form-input:not(:placeholder-shown):invalid ~ .text-invalid-name {
+  display: block;
+}
+
+.text-valid-email,
+.text-invalid-email,
+.text-valid-name,
+.text-invalid-name {
+  display: none;
+}
+
+.text-valid-email,
+.text-invalid-email,
+.text-valid-name,
+.text-invalid-name {
+  color: #141414;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding-bottom: 3px;
+  padding-top: 2px;
+}
+
+.text-valid-email,
+.text-valid-name {
+  color: #3cbc81;
+}
+
+.text-invalid-email,
+.text-invalid-name {
+  color: #e74a3b;
+}
+
 /* Кнопка відправки */
 .submit-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  padding: 16px 191px;
+  padding: 16px 0;
   border-radius: 30px;
-
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 428px;
+  max-width: 100%;
   height: 52px;
   font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
@@ -192,21 +245,160 @@
   text-transform: uppercase;
   color: #fbfbfb;
   background: #7a3145;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.submit-btn:hover,
+.submit-btn:focus {
+  box-shadow: rgba(0, 0, 0, 0.3) 1.95px 1.95px 2.6px;
+  background-color: #9e405a;
+  color: #eeeeee;
+}
+.submit-btn:active {
+  background-color: #e1e1e1;
+  color: #7a3145;
+}
 /* Овочеві картки */
 .vegetables {
   display: flex;
+  flex-direction: row;
+  background: #fbfbfb;
   justify-content: space-around;
   margin-top: 20px;
+  gap: 10px;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background-color: #7a3145;
   text-align: center;
+  border-radius: 15%;
+  padding: 8px;
+  width: 140px;
+  transition: background-color 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-vegetables-head {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+
+  line-height: 1.25;
+
+  color: #fdfdfd;
+}
+.text-card-vegetebles {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+
+  line-height: 1.25;
+
+  color: #fdfdfd;
+}
+.card-img {
+  width: 100%;
+  max-height: 100px;
+  overflow: cover;
+  border-radius: 25%;
+  transition: background-color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-img:hover,
+.card-img:focus {
+  background-color: #e1e1e1;
+}
+.card:hover,
+.card:focus {
+  background-color: #9e405a;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+/* Адаптив для планшетів (max-width: 768px) */
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    max-width: 450px;
+    padding: 40px;
+  }
+
+  .modal-body {
+    gap: 40px;
+    max-width: 100%;
+  }
+
+  .forma,
+  .modal-form,
+  .modal-body {
+    width: 100%;
+  }
+
+  .modal-form-input,
+  .modal-form-textarea,
+  .submit-btn {
+    width: 100%;
+  }
+
+  .modal-titel {
+    font-size: 28px;
+  }
+
+  .close-btn {
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+  }
 }
 
-.card img {
-  width: 100px;
-  height: 100px;
-  border-radius: 8px;
+/* Адаптив для мобільних пристроїв (max-width: 320px) */
+@media (max-width: 480px) {
+  .modal-content {
+    width: 100%;
+    height: 100%;
+    padding: 30px 40px;
+    border-radius: 20px;
+  }
+
+  .modal-body {
+    width: 80%;
+    gap: 35px;
+  }
+  .vegetables {
+    margin-top: 50px;
+  }
+
+  .forma {
+    gap: 35px;
+  }
+  .modal-form,
+  .modal-body {
+    width: 100%;
+  }
+
+  .modal-form-input,
+  .modal-form-textarea,
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+    height: 48px;
+  }
+
+  .modal-titel {
+    font-size: 24px;
+  }
+
+  .close-btn {
+    width: 28px;
+    height: 28px;
+    top: 12px;
+    right: 12px;
+  }
 }

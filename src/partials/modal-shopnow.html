@@ -21,22 +21,28 @@
             <input
               class="modal-form-input"
               type="text"
-              placeholder="name"
+              placeholder="Name"
               required
             />
+            <p class="text-valid-name">Succes!</p>
+            <p class="text-invalid-name">
+              The name must contain at least 3 letters!
+            </p>
           </label>
           <label class="label-forma">
             <input
               class="modal-form-input"
               type="email"
-              placeholder="email"
+              placeholder="Email"
               required
             />
+            <p class="text-valid-email">Succes!</p>
+            <p class="text-invalid-email">Invalid email, try again</p>
           </label>
           <label class="label-forma">
             <textarea
               class="modal-form-textarea"
-              placeholder="comment"
+              placeholder="Comment"
             ></textarea>
           </label>
         </form>
@@ -47,17 +53,47 @@
     <!-- Овочеві картки -->
     <div class="vegetables">
       <div class="card">
-        <img src="../modalka/mushrooms.jpg" alt="mushrooms" />
-        <p>mushrooms</p>
+        <h3 class="card-vegetables-head">mushrooms</h3>
+        <img
+          class="card-img"
+          srcset="
+            /img/vegetables/mushrooms.webp    1x,
+            /img/vegetables/mushrooms-2x.webp 2x
+          "
+          class="vegetables-img"
+          src="/img/vegetables/mushrooms.webp"
+          alt="mushrooms"
+        />
+
+        <p class="text-card-vegetebles">40 USD / kg</p>
       </div>
       <div class="card">
-        <img src="../modalka/leek.jpg" alt="leek" />
-        <p>leek/p></p>
+        <h3 class="card-vegetables-head">leek</h3>
+        <img
+          class="card-img"
+          srcset="/img/vegetables/leek.webp 1x, /img/vegetables/leek-2x.webp 2x"
+          class="vegetables-img"
+          src="/img/vegetables/leek.webp"
+          alt="leek"
+        />
+
+        <p class="text-card-vegetebles">50 USD / kg</p>
       </div>
 
       <div class="card">
-        <img src="../modalka/carrot.jpg" alt="carrot" />
-        <p>carrot</p>
+        <h3 class="card-vegetables-head">carrot</h3>
+        <img
+          class="card-img"
+          srcset="
+            /img/vegetables/carrot.webp    1x,
+            /img/vegetables/carrot-2x.webp 2x
+          "
+          class="vegetables-img"
+          src="/img/vegetables/carrot.webp"
+          alt="carrot"
+        />
+
+        <p class="text-card-vegetebles">40 USD / kg</p>
       </div>
     </div>
   </div>
