@@ -7,14 +7,14 @@
   font-size: 48px;
   line-height: 1.08;
   text-transform: uppercase;
-  width: 335px;
+  max-width: 335px;
   margin-bottom: 20px;
 }
 
 @media screen and (max-width: 330px) {
   .reviews_title {
     font-size: 46px;
-    max-width: 320px;
+
   }
 }
 
