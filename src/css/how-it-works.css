@@ -17,12 +17,11 @@
 }
 
 .div-blockimg {
-    /* min-width: 375px;    */
+
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: #7a3145; */
-    /* padding: 40px 20px; */
+
 
 }
 
@@ -106,11 +105,6 @@ ol li:nth-child(2) {
 
 @media screen and (min-width: 768px) {
 
-    /* img{
-        content: url(/img/how-it-works/tab-1x.png);
-        width: 640px;
-        height: 640px;
-    } */
     .how-it-works {
         background: linear-gradient(to bottom, #7a3145 840px, #576f35 840px);
         padding-top: 100px;
@@ -120,11 +114,6 @@ ol li:nth-child(2) {
         margin-bottom: 200px;
     }
 
-    /* @media screen and (min-resolution: 2x){
-        img{
-            content: url(/img/how-it-works/tab-2x.png);
-        }
-    } */
     .second-sectionhow {
         margin: 0 auto;
         width: 440px;
