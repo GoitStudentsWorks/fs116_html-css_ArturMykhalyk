@@ -7,16 +7,16 @@
       </svg>
     </button>
     <div class="modal-body">
-      <h2 class="modal-titel">
+      <p class="modal-titel">
         Ordering <span class="modal-titel-purpel">from us </span>is quick and
         easy! Fill out <span class="modal-titel-green">the form</span> below and
         we will contact you !
-      </h2>
+      </p>
 
       <!-- Форма -->
       <div class="forma" data-shopnow-form>
         <form class="modal-form">
-          <label class="label-forma">
+          <label class="label-forma"><span class="visually-hidden">Name</span>
             <input
               class="modal-form-input"
               type="text"
@@ -27,7 +27,7 @@
               required
             />
           </label>
-          <label class="label-forma">
+          <label class="label-forma"><span class="visually-hidden">Email</span>
             <input
               class="modal-form-input"
               type="email"
@@ -38,7 +38,7 @@
               required
             />
           </label>
-          <label class="label-forma">
+          <label class="label-forma"><span class="visually-hidden">Comment</span>
             <textarea
               class="modal-form-textarea"
               placeholder="Comment"
@@ -46,9 +46,8 @@
               id="user-comment"
             ></textarea>
           </label>
+          <button type="submit" class="submit-btn">shop now</button>
         </form>
-
-        <button type="submit" class="submit-btn">shop now</button>
       </div>
     </div>
     <!-- Овочеві картки -->

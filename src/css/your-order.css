@@ -362,9 +362,9 @@
 }
 
 .your-order-block-btn:active {
-    border-color: #fbfbfb;
-    background-color: #fbfbfb;
+    background-color: #FBFBFB;
     color: #7a3145;
+    border: solid 1px #3CBC81;
 }
 }
 
