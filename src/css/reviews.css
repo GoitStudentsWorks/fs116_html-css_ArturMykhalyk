@@ -13,9 +13,9 @@
 
 @media screen and (max-width: 330px) {
   .reviews_title {
-font-size: 46px;
-max-width: 320px;
-}
+    font-size: 46px;
+    max-width: 320px;
+  }
 }
 
 .reviews-title-highlight {
@@ -31,15 +31,22 @@ max-width: 320px;
 
 /* ==============================reviews_list============================== */
 
+.reviews_list-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .reviews_list {
   display: flex;
   gap: 24px;
-  overflow-x: scroll;
-  white-space: wrap;
-  padding-bottom: 4px;
+  transition: transform 0.5s ease-in-out;
 }
 
 .reviews_item {
+  flex: 0 0 100%;
   max-height: 228px;
   display: flex;
   flex-direction: column;
@@ -49,8 +56,7 @@ max-width: 320px;
   border-radius: 24px;
   padding: 20px;
   background: #fbfbfb;
-  flex: 0 0 auto;
-  width: 100%;
+  box-sizing: border-box;
 }
 
 .reviews-image {
@@ -76,6 +82,32 @@ max-width: 320px;
   box-sizing: border-box;
 }
 
+.slider-button {
+  background-color: transparent;
+  color: #576f35;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 80px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.prev-button {
+  left: -10px;
+}
+
+.next-button {
+  right: -10px;
+}
+
 @media screen and (min-width: 768px) {
   .reviews_title {
     font-size: 64px;
@@ -92,7 +124,7 @@ max-width: 320px;
   }
 
   .reviews_item {
-    width: 340px;
+    max-width: 340px;
     max-height: 248px;
   }
 
@@ -105,10 +137,10 @@ max-width: 320px;
 
 @media screen and (min-width: 1280px) {
   .reviews_item {
-    width: 344px;
+    max-width: 344px;
   }
 
-  .reviews_list {
-  overflow-x: auto;
-}
+  .slider-button {
+    display: none;
+  }
 }
