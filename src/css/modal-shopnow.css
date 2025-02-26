@@ -19,6 +19,8 @@
   border-radius: 30px;
   border: 3px solid #576f35;
   width: 524px;
+  height: 792px;
+  overflow-y: auto;
 
   position: relative;
 }
@@ -30,6 +32,10 @@
   right: 24px;
   background-color: #576f35;
   border-radius: 50%;
+  border: transparent;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   width: 40px;
   height: 40px;
   transform: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -94,12 +100,6 @@
 }
 
 /* Кнопка закриття */
-.close-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  cursor: pointer;
-}
 
 /* Форма */
 .modal-form {
@@ -117,6 +117,8 @@
   justify-content: flex-start;
   gap: 24px;
 }
+
+
 
 .modal-form-input {
   background-color: transparent;
@@ -190,13 +192,13 @@
   border: 1px solid #3cbc81;
 }
 
-.modal-form-input:not(:placeholder-shown):valid ~ .text-valid-email,
-.modal-form-input:not(:placeholder-shown):invalid ~ .text-invalid-email {
+.modal-form-input:not(:placeholder-shown):valid~.text-valid-email,
+.modal-form-input:not(:placeholder-shown):invalid~.text-invalid-email {
   display: block;
 }
 
-.modal-form-input:not(:placeholder-shown):valid ~ .text-valid-name,
-.modal-form-input:not(:placeholder-shown):invalid ~ .text-invalid-name {
+.modal-form-input:not(:placeholder-shown):valid~.text-valid-name,
+.modal-form-input:not(:placeholder-shown):invalid~.text-invalid-name {
   display: block;
 }
 
@@ -237,13 +239,34 @@
 }
 
 /* Овочеві картки */
+
 .modal-vegetables {
   display: flex;
   flex-direction: row;
   background: #fbfbfb;
   justify-content: space-around;
-  margin-top: 20px;
+  max-width: 85%;
   gap: 10px;
+  padding: 4px;
+}
+
+.card-radio {
+  display: none;
+}
+
+/* Стиль вибраної картки */
+.card-radio:checked+.card .card-vegetables-head,
+.card-radio:checked+.card .card-img {
+  background-color: #9e405a;
+  color: #fdfdfd;
+  border-radius: 15px;
+}
+
+/* Додатковий ефект при виборі */
+.card-radio:checked~.card {
+  background-color: #7a3145;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
 }
 
 .card {
@@ -301,10 +324,18 @@
 @media (min-width: 768px) and (max-width: 1279px) {
   .modal-content {
     width: 90%;
+    height: 90%;
+    max-height: 744px;
+
+    overflow-y: auto;
     max-width: 450px;
     padding: 40px;
   }
+
   .modal-vegetables {
+    max-width: 364px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
     overflow-x: auto;
     border: 2px solid #7a3145;
     border-radius: 30px;
@@ -324,11 +355,7 @@
   .modal-form-input,
   .modal-form-textarea,
   .submit-btn {
-    width: 100%;
-  }
-
-  .label-forma {
-        width: 100%;
+    width: 364px;
   }
 
   .modal-titel {
@@ -345,26 +372,29 @@
 
 /* Адаптив для мобільних пристроїв (max-width: 320px) */
 @media (max-width: 767px) {
-  .modal-vegetables {
-    overflow-x: auto;
-    border: 2px solid #7a3145;
-    border-radius: 30px;
-  }
   .modal-content {
-    max-width: 365px;
+    max-width: 320px;
     height: 100%;
+    max-height: 697px;
+    overflow-y: auto;
     padding: 30px 20px;
     border-radius: 20px;
   }
 
+  .modal-vegetables {
+    overflow-x: auto;
+    border: 2px solid #7a3145;
+    border-radius: 30px;
+    margin-bottom: auto;
+    max-width: 276px;
+  }
+
   .modal-body {
-    max-width: 280px;
+    max-width: 260px;
     gap: 35px;
   }
 
-  .vegetables {
-    margin-top: 50px;
-  }
+
 
   .forma {
     max-width: 280px;
@@ -372,19 +402,20 @@
   }
 
   .modal-form {
-    max-width: 375px;
+    max-width: 280px;
   }
 
   .modal-form-input,
   .modal-form-textarea,
   .submit-btn {
-    max-width: 310px;
+    max-width: 274px;
     padding: 12px;
   }
 
   .submit-btn {
     font-size: 16px;
     height: 48px;
+
   }
 
   .modal-titel {
@@ -396,5 +427,6 @@
     height: 28px;
     top: 12px;
     right: 12px;
+
   }
 }
