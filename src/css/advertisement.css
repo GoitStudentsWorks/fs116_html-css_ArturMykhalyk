@@ -1,3 +1,65 @@
-.advertisement {
-    color: #576F35;
+.page-advertisement {
+  background-color: #fbfbfb;
+}
+.promo-text {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.07;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+.discount-text {
+  display: inline-block;
+  color: #fbfbfb;
+  background-color: #576f35;
+  border-radius: 12px;
+  max-height: 102px;
+}
+/* -------------------Tablet------------------- */
+@media only screen and (min-width: 768px) {
+  .discount-text {
+    width: 675px;
+    padding-top: 20px;
+    min-height: 86px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .discount-text.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .promo-text {
+    font-size: 64px;
+    line-height: 1;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .promo-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* -------------------Desktop------------------- */
+@media only screen and (min-width: 1280px) {
+  .advertisement-container {
+    padding-left: 116px;
+  }
+  .promo-text {
+    font-size: 76px;
+    letter-spacing: -0.013em;
+    max-width: 1054px;
+  }
+  .discount-text {
+    width: 808px;
+    min-height: 84px;
+    padding-top: 4px;
+    padding-right: 2px;
+    padding-left: 16px;
+    margin-left: -16px;
+  }
 }

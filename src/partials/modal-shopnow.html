@@ -1,0 +1,91 @@
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <!-- Кнопка закриття -->
+    <button id="closeModal" class="close-btn">
+      <svg class="modal-icons-close" width="20" height="20">
+        <use href="/img/sprite.svg#icon-exit"></use>
+      </svg>
+    </button>
+    <div class="modal-body">
+      <h2 class="modal-titel">
+        Ordering <span class="modal-titel-purpel">from us </span>is quick and
+        easy! Fill out <span class="modal-titel-green">the form</span> below and
+        we will contact you !
+      </h2>
+
+      <!-- Форма -->
+
+      <div class="forma">
+        <form class="modal-form">
+          <label class="label-forma">
+            <input
+              class="modal-form-input"
+              type="text"
+              placeholder="Name"
+              required
+            />
+          </label>
+          <label class="label-forma">
+            <input
+              class="modal-form-input"
+              type="email"
+              placeholder="Email"
+              required
+            />
+          </label>
+          <label class="label-forma">
+            <textarea
+              class="modal-form-textarea"
+              placeholder="Comment"
+            ></textarea>
+          </label>
+        </form>
+
+        <button type="submit" class="submit-btn">shop now</button>
+      </div>
+    </div>
+    <!-- Овочеві картки -->
+    <div class="modal-vegetables">
+      <div class="card">
+        <h3 class="card-vegetables-head">mushrooms</h3>
+        <img
+          class="card-img vegetables-img"
+          srcset="
+            /img/vegetables/mushrooms.webp    1x,
+            /img/vegetables/mushrooms-2x.webp 2x
+          "
+          src="/img/vegetables/mushrooms.webp"
+          alt="mushrooms"
+        />
+
+        <p class="text-card-vegetebles">40 USD / kg</p>
+      </div>
+      <div class="card">
+        <h3 class="card-vegetables-head">leek</h3>
+        <img
+          class="card-img vegetables-img"
+          srcset="/img/vegetables/leek.webp 1x, /img/vegetables/leek-2x.webp 2x"
+          src="/img/vegetables/leek.webp"
+          alt="leek"
+        />
+
+        <p class="text-card-vegetebles">50 USD / kg</p>
+      </div>
+
+      <div class="card">
+        <h3 class="card-vegetables-head">carrot</h3>
+        <img
+          class="card-img vegetables-img"
+          srcset="
+            /img/vegetables/carrot.webp    1x,
+            /img/vegetables/carrot-2x.webp 2x
+          "
+          src="/img/vegetables/carrot.webp"
+          alt="carrot"
+        />
+
+        <p class="text-card-vegetebles">40 USD / kg</p>
+      </div>
+    </div>
+  </div>
+</div>
