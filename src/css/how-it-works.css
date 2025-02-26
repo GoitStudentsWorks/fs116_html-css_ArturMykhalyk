@@ -72,6 +72,10 @@
     margin-bottom: 120px;
 }
 
+.img-how {
+    border-radius: 30px;
+}
+
 .how-items::before {
     content: counter(list-counter) "";
     counter-increment: list-counter;
@@ -172,9 +176,7 @@ ol li:nth-child(2) {
         margin-bottom: 104px;
     }
 
-    .img-how {
-        margin: 0;
-    }
+
 
     .div-blockimg {
         margin-right: 200px;
