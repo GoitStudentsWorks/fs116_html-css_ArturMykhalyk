@@ -17,34 +17,30 @@
 
       <div class="forma">
         <form class="modal-form">
-          <label class="label-forma">
-            <span class="visually-hidden-mdlabel">name</span>
-            <input
-              class="modal-form-input"
-              type="text"
-              placeholder="Name"
-              required
-            />
-            <p class="text-valid-name">Succes!</p>
-            <p class="text-invalid-name">
-              The name must contain at least 3 letters!
-            </p>
+          <label class="label-forma" for="name">
+            <span class="visually-hidden">name</span>
           </label>
+          <input
+            id="name"
+            class="modal-form-input"
+            type="text"
+            placeholder="Name"
+            required
+          />
+
+          <label class="label-forma" for="email">
+            <span class="visually-hidden">E-mail </span>
+          </label>
+          <input
+            id="email"
+            class="modal-form-input"
+            type="email"
+            placeholder="E-mail"
+            required
+          />
 
           <label class="label-forma">
-            <span class="visually-hidden-mdlabel">E-mail </span>
-            <input
-              class="modal-form-input"
-              type="email"
-              placeholder="E-mail"
-              required
-            />
-            <p class="text-valid-email">Succes!</p>
-            <p class="text-invalid-email">Invalid email, try again</p>
-          </label>
-
-          <label class="label-forma">
-            <span class="visually-hidden-mdlabel">comment</span>
+            <span class="visually-hidden">comment</span>
             <textarea
               class="modal-form-textarea"
               placeholder="Comment"
@@ -53,56 +49,59 @@
 
           <!-- Овочеві картки (радіо-кнопки) -->
           <div class="modal-vegetables">
-            <label class="card">
-              <span class="visually-hidden-mdlabel">E-mail </span>
+            <div class="card">
+              <span class="visually-hidden">mushrooms </span>
               <input
+                aria-label="mushrooms"
                 type="radio"
                 name="product"
                 value="mushrooms"
                 class="card-radio"
               />
-              <h3 class="card-vegetables-head">mushrooms</h3>
+              <p class="card-vegetables-head">mushrooms</p>
               <img
                 class="card-img"
                 src="/img/vegetables/mushrooms.webp"
                 alt="mushrooms"
               />
               <p class="text-card-vegetebles">40 USD / kg</p>
-            </label>
+            </div>
 
-            <label class="card">
-              <span class="visually-hidden-mdlabel">E-mail </span>
+            <div class="card">
+              <span class="visually-hidden">leek </span>
               <input
+                aria-label="leek"
                 type="radio"
                 name="product"
                 value="leek"
                 class="card-radio"
               />
-              <h3 class="card-vegetables-head">leek</h3>
+              <p class="card-vegetables-head">leek</p>
               <img
                 class="card-img"
                 src="/img/vegetables/leek.webp"
                 alt="leek"
               />
               <p class="text-card-vegetebles">50 USD / kg</p>
-            </label>
+            </div>
 
-            <label class="card">
-              <span class="visually-hidden-mdlabel">E-mail </span>
+            <div class="card">
+              <span class="visually-hidden">carrot</span>
               <input
+                aria-label="carrot"
                 type="radio"
                 name="product"
                 value="carrot"
                 class="card-radio"
               />
-              <h3 class="card-vegetables-head">carrot</h3>
+              <p class="card-vegetables-head">carrot</p>
               <img
                 class="card-img"
                 src="/img/vegetables/carrot.webp"
                 alt="carrot"
               />
               <p class="text-card-vegetebles">40 USD / kg</p>
-            </label>
+            </div>
           </div>
 
           <button type="submit" class="submit-btn">Shop now</button>

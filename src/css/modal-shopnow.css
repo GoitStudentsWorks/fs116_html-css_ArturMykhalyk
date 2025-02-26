@@ -19,6 +19,8 @@
   border-radius: 30px;
   border: 3px solid #576f35;
   width: 524px;
+  height: 792px;
+  overflow-y: auto;
 
   position: relative;
 }
@@ -116,18 +118,9 @@
   justify-content: flex-start;
   gap: 24px;
 }
-.visually-hidden-mdlabel {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
-  margin: -1px;
-}
+
+
+
 .modal-form-input {
   background-color: transparent;
   outline: transparent;
@@ -207,13 +200,13 @@
   border: 1px solid #3cbc81;
 }
 
-.modal-form-input:not(:placeholder-shown):valid ~ .text-valid-email,
-.modal-form-input:not(:placeholder-shown):invalid ~ .text-invalid-email {
+.modal-form-input:not(:placeholder-shown):valid~.text-valid-email,
+.modal-form-input:not(:placeholder-shown):invalid~.text-invalid-email {
   display: block;
 }
 
-.modal-form-input:not(:placeholder-shown):valid ~ .text-valid-name,
-.modal-form-input:not(:placeholder-shown):invalid ~ .text-invalid-name {
+.modal-form-input:not(:placeholder-shown):valid~.text-valid-name,
+.modal-form-input:not(:placeholder-shown):invalid~.text-invalid-name {
   display: block;
 }
 
@@ -294,20 +287,21 @@
   gap: 10px;
   padding: 4px;
 }
+
 .card-radio {
   display: none;
 }
 
 /* Стиль вибраної картки */
-.card-radio:checked + .card .card-vegetables-head,
-.card-radio:checked + .card .card-img {
+.card-radio:checked+.card .card-vegetables-head,
+.card-radio:checked+.card .card-img {
   background-color: #9e405a;
   color: #fdfdfd;
   border-radius: 15px;
 }
 
 /* Додатковий ефект при виборі */
-.card-radio:checked ~ .card {
+.card-radio:checked~.card {
   background-color: #7a3145;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
   transform: scale(1.05);
@@ -372,12 +366,16 @@
 @media (min-width: 768px) and (max-width: 1279px) {
   .modal-content {
     width: 90%;
-    max-height: 90%;
+    height: 90%;
+    max-height: 744px;
+
     overflow-y: auto;
     max-width: 450px;
     padding: 40px;
   }
+
   .modal-vegetables {
+    max-width: 364px;
     justify-content: flex-start;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -399,7 +397,7 @@
   .modal-form-input,
   .modal-form-textarea,
   .submit-btn {
-    width: 100%;
+    width: 364px;
   }
 
   .modal-titel {
@@ -417,8 +415,9 @@
 /* Адаптив для мобільних пристроїв (max-width: 320px) */
 @media (max-width: 767px) {
   .modal-content {
-    max-width: 365px;
+    max-width: 320px;
     height: 100%;
+    max-height: 697px;
     overflow-y: auto;
     padding: 30px 20px;
     border-radius: 20px;
@@ -428,16 +427,16 @@
     overflow-x: auto;
     border: 2px solid #7a3145;
     border-radius: 30px;
+    margin-bottom: auto;
+    max-width: 276px;
   }
 
   .modal-body {
-    max-width: 280px;
+    max-width: 260px;
     gap: 35px;
   }
 
-  .vegetables {
-    margin-top: 50px;
-  }
+
 
   .forma {
     max-width: 280px;
@@ -445,19 +444,20 @@
   }
 
   .modal-form {
-    max-width: 375px;
+    max-width: 280px;
   }
 
   .modal-form-input,
   .modal-form-textarea,
   .submit-btn {
-    max-width: 310px;
+    max-width: 274px;
     padding: 12px;
   }
 
   .submit-btn {
     font-size: 16px;
     height: 48px;
+
   }
 
   .modal-titel {
@@ -469,5 +469,6 @@
     height: 28px;
     top: 12px;
     right: 12px;
+
   }
 }
